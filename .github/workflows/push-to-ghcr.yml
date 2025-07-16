@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Container tag (default: latest)'
+        description: "Container tag (default: latest)"
         required: false
-        default: 'latest'
+        default: "latest"
         type: string
 
 env:
@@ -44,7 +44,7 @@ jobs:
             type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
-            type=raw,value=${{ github.event.inputs.tag }},enable={{is_default}}
+            type=raw,value=${{ github.event.inputs.tag }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -54,4 +54,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
-          cache-to: type=gha,mode=max 
+          cache-to: type=gha,mode=max
