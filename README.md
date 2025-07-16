@@ -1,0 +1,1 @@
+POC for using google sdk within a docker container
