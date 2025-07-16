@@ -1,6 +1,5 @@
-FROM google/cloud-sdk:alpine
-
-RUN apk add --no-cache nodejs npm
+# Use the official Node.js runtime as the base image
+FROM node:18-alpine
 
 # Set the working directory in the container
 WORKDIR /app
