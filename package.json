@@ -1,0 +1,21 @@
+{
+  "name": "gcp-storage-bucket-list",
+  "version": "1.0.0",
+  "description": "Node.js script to list Google Cloud Storage buckets using Application Default Credentials",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "google-cloud",
+    "storage",
+    "buckets",
+    "gcp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^7.7.0"
+  }
+}
